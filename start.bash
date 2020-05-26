@@ -21,14 +21,13 @@ run(){
     then
         echo Starting spark-submit: $APP_PATH
         echo ======================
-        spark/bin/spark-submit /app/app.jar
+        tini spark/bin/spark-submit /app/app.jar
     else
         echo Not found: $APP_PATH. Starting spark-shell
         echo ==========
-        spark/bin/spark-shell
+        tini spark/bin/spark-shell
     fi
 }
-
 
 gcp_credentials
 run
