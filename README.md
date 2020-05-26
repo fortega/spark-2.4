@@ -2,7 +2,7 @@
 
 ## Versions
 
-* Hadoop 2.9.2
+* Hadoop 2.7.7
 * Spark 2.4.5
 * Scala 2.12.10
 
