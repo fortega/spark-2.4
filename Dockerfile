@@ -23,4 +23,6 @@ COPY conf/spark-defaults.conf spark/conf/
 
 RUN spark/bin/spark-submit spark/jars/ivy-2.4.0.jar; echo
 
-CMD ["spark/bin/spark-shell"]
+COPY start.bash .
+
+CMD ["bash","start.bash"]
