@@ -21,11 +21,11 @@ run(){
     then
         echo Starting spark-submit: $APP_PATH
         echo ======================
-        tini spark/bin/spark-submit /app/app.jar
+        spark/bin/spark-submit /app/app.jar
     else
         echo Not found: $APP_PATH. Starting spark-shell
         echo ==========
-        tini spark/bin/spark-shell
+        spark/bin/spark-shell
     fi
 }
 

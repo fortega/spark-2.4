@@ -24,6 +24,8 @@ COPY conf/spark-defaults.conf spark/conf/
 # Start spark to cache packages
 RUN spark/bin/spark-submit spark/jars/ivy-2.4.0.jar; echo
 
+ENTRYPOINT [ "tini", "--" ]
+
 COPY start.bash .
 
 CMD ["bash","start.bash"]
